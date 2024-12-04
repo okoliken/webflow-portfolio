@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import "../index.css";
 import { css } from "../../styled-system/css";
+import { Image } from "astro:assets";
+import ScrollDownImage from '../assets/image.png'
 ---
 
 <Layout>
@@ -10,7 +12,8 @@ import { css } from "../../styled-system/css";
       bg: "purpleDark",
       color: "lavenderLight",
       p: "2.5rem",
-      borderRadius: "md",
+      borderBottomLeftRadius: "md",
+      borderBottomRightRadius: "md",
       h: { base: "100%", md: "37.375rem" },
       display: "flex",
       flexDirection: "column",
@@ -20,6 +23,9 @@ import { css } from "../../styled-system/css";
     <div
       class={css({
         mt: "2.5rem",
+		display: "flex",
+        gap: "0 1.5rem",
+        flexDirection: "column",
       })}
     >
       <h1
@@ -43,6 +49,42 @@ import { css } from "../../styled-system/css";
         >
         <br /> experiences
       </h1>
+      <p
+        class={css({
+          fontSize: "base.subtitle",
+          lineHeight: "base",
+          mt: "1.5rem",
+
+        })}
+      >
+        I work with people all over the world to create  <br /> tailor-made Webflow experiences
+      </p>
+    </div>
+
+	<div class={css({
+        mt: "auto",
+		display:'flex',
+		justifyContent:'space-between',
+		alignItems:'end',
+		width:'100%'
+      })}
+    >
+     <p class={css({
+		fontSize:'base.small',
+		lineHeight:'snug',
+		fontWeight:'medium'
+	})}>Available for freelance work</p>
+
+	 <Image 
+		class={css({
+			userSelect: "none",
+		})}
+		draggable={false}
+        src={ScrollDownImage} 
+        alt="Decorative image"
+        width="106"
+        height="106"
+    />
     </div>
   </div>
 </Layout>

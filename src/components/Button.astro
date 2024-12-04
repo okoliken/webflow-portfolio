@@ -1,0 +1,31 @@
+---
+import { css } from "../../styled-system/css";
+interface Props {
+  variant?: 'primary' | 'secondary';
+  class?: string;
+}
+
+const { variant = 'primary', class: className } = Astro.props;
+---
+
+<button
+  class={css({
+    bg: "purpleDark",
+    color: "lavenderLight",
+    p: "0.5rem",
+    borderRadius: "md",
+    display: "flex",
+    alignItems: "center",
+    gap: "0.25rem",
+    w: '7.875rem',
+    textTransform: 'uppercase',
+    h: '2.313rem',
+    border: '1px solid transparent',
+    backgroundImage: 'linear-gradient(purpleDark, purpleDark), gradients.secondary',
+    backgroundOrigin: 'border-box',
+    backgroundClip: 'padding-box, border-box',
+    boxShadow: 'shadows.all'
+  })}
+>
+  <slot />
+</button> 

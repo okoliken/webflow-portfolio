@@ -1,0 +1,108 @@
+---
+import { css } from "../../styled-system/css";
+import Logo from "../assets/NavbarBrand.png";
+import { Image } from "astro:assets";
+import Button from "./Button.astro";
+---
+
+<header
+  class={css({
+    bg: "purpleDark",
+    color: "lavenderLight",
+    p: "1.25rem 2.5rem",
+    borderTopLeftRadius: "md",
+    borderTopRightRadius: "md",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+  })}
+>
+  <div>
+    <Image
+      class={css({
+        width: "10.813rem",
+        height: "1.609rem",
+        objectFit: "contain",
+        userSelect: "none",
+      })}
+      src={Logo}
+      alt="Logo"
+    />
+  </div>
+
+  <ul
+    class={css({
+      display: "flex",
+      alignItems: "center",
+      "& > li": {
+        p: "0.75rem",
+        display: "flex",
+        alignItems: "center",
+        gap: "0.25rem",
+        textTransform: "uppercase",
+        _hover: {
+          color: "lavenderLight",
+          textDecoration: "underline",
+          cursor: "pointer",
+        },
+        fontSize: "base.small",
+        fontWeight: "medium",
+      },
+      gap: "0 1.25rem",
+    })}
+  >
+    <li>
+      Linkedin
+
+      <svg
+        width="11"
+        height="10"
+        viewBox="0 0 11 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
+          stroke="#E9DEFF"
+          stroke-linecap="square"
+          stroke-linejoin="round"></path>
+      </svg>
+    </li>
+    <li>
+      Twitter
+
+      <svg
+        width="11"
+        height="10"
+        viewBox="0 0 11 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
+          stroke="#E9DEFF"
+          stroke-linecap="square"
+          stroke-linejoin="round"></path>
+      </svg>
+    </li>
+    <li>
+      Dribble
+
+      <svg
+        width="11"
+        height="10"
+        viewBox="0 0 11 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
+          stroke="#E9DEFF"
+          stroke-linecap="square"
+          stroke-linejoin="round"></path>
+      </svg>
+    </li>
+  </ul>
+
+  <Button>Let’s talk</Button>
+</header>

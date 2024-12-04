@@ -38,6 +38,7 @@ export default defineConfig({
             "title": { value: "2rem" },         // was xl - 32px
             "subtitle": { value: "1.5rem" },    // was lg - 24px
             "body": { value: "1.375rem" },      // was sm - 22px
+            "small": { value: "0.875rem" },     // 14px
           }
         },
         letterSpacings: {
@@ -79,13 +80,14 @@ export default defineConfig({
           lg: { value: "2.5rem" }       // 40px
         },
         lineHeights: {
-          display: { value: "6.25rem" }  // 100px
+          display: { value: "6.25rem" },  // 100px
+          base: { value: "1.8rem" },       // 28.8px
+          snug: { value: "1.4rem" },      // 22.4px
         }
       }
     },
   },
 
-  // The output directory for your css system
   outdir: "styled-system",
   globalCss: globalStyles,
 });
