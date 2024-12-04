@@ -13,6 +13,14 @@ const globalStyles = defineGlobalStyles({
     color:'#fff',
     padding:'1.25rem',
     fontFamily: 'Montserrat, system-ui, sans-serif',
+    scrollSnapType: 'y mandatory',
+  },
+  '.scroll-snap-container': {
+    scrollSnapType: 'y mandatory',
+    overflowY: 'scroll',
+  },
+  '.scroll-snap-child': {
+    scrollSnapAlign: 'center',
   },
 });
 

@@ -12,9 +12,11 @@ import Header from "../components/Header.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Webflow Portfolio</title>
 	</head>
-	<body>
+	<body class="scroll-snap-container">
 		<Header />
-		<slot />
+		<div class="scroll-snap-child">
+			<slot />
+		</div>
 	</body>
 </html>
 
