@@ -1,29 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import "../index.css";
-import { css } from "../../styled-system/css";
 import { Image } from "astro:assets";
 import ScrollDownImage from "../assets/image.png";
-import { styles } from "../styles/home";
+import Logo from "../assets/NavbarBrand.png";
+import LetsTalkNowImage from "../assets/lets-talk-now.png";
+import KorbaImage from "../assets/korba.png";
+import {
+  heroStyles,
+  servicesStyles,
+  footerStyles,
+  awardsStyles,
+} from "../styles";
+import "../index.css";
 ---
 
 <Layout>
-  <div class={css(styles.container)}>
-    <div class={css(styles.contentWrapper)}>
-      <h1 class={css(styles.heading)}>
-        I create <span class={css(styles.highlightedText)}>beautiful</span>
+  <div class={heroStyles.container}>
+    <div class={heroStyles.contentWrapper}>
+      <h1 class={heroStyles.heading}>
+        I create <span class={heroStyles.highlightedText}>beautiful</span>
         <br /> experiences
       </h1>
-      <p class={css(styles.subtitle)}>
+      <p class={heroStyles.subtitle}>
         I work with people all over the world to create <br /> tailor-made Webflow
         experiences
       </p>
     </div>
 
-    <div class={css(styles.footer)}>
-      <p class={css(styles.availabilityText)}>Available for freelance work</p>
+    <div class={heroStyles.footer}>
+      <p class={heroStyles.availabilityText}>Available for freelance work</p>
       <Image
-        class={css(styles.scrollImage)}
+        class={heroStyles.scrollImage}
         draggable={false}
         src={ScrollDownImage}
         alt="Decorative image"
@@ -33,14 +40,12 @@ import { styles } from "../styles/home";
     </div>
   </div>
 
-  <div class={css(styles.servicesGrid)}>
-    <div class={css(styles.serviceCard)}>
+  <div class={servicesStyles.servicesGrid}>
+    <div class={servicesStyles.serviceCard}>
       <div>
-        <h2 class={css(styles.serviceTitle)}>
-          Development
-        </h2>
+        <h2 class={servicesStyles.serviceTitle}>Development</h2>
       </div>
-      <p class={css(styles.serviceDescription)}>
+      <p class={servicesStyles.serviceDescription}>
         I specialize in developing websites using Webflow, a powerful platform
         that allows for easy customization and responsive design. I have
         experience building websites for a variety of industries, from small
@@ -48,13 +53,11 @@ import { styles } from "../styles/home";
         functional and smooth websites that generate traffic.
       </p>
     </div>
-    <div class={css(styles.serviceCard)}>
+    <div class={servicesStyles.serviceCard}>
       <div>
-        <h2 class={css(styles.serviceTitle)}>
-          Art direction
-        </h2>
+        <h2 class={servicesStyles.serviceTitle}>Art direction</h2>
       </div>
-      <p class={css(styles.serviceDescription)}>
+      <p class={servicesStyles.serviceDescription}>
         Art direction is the process of bringing together all of the creative
         elements of a project to create a cohesive and visually stunning end
         product. I work with clients to develop a concept and bring it to life
@@ -64,8 +67,181 @@ import { styles } from "../styles/home";
     </div>
   </div>
 
-  <div class={css(styles.lightPatternSection)}>
+  <div class={servicesStyles.lightPatternSection}>
+	<div class={servicesStyles.flexContainer}>
+		<div class={servicesStyles.caseStudy}>
+			<span>case study</span>
+			<h2>Korba</h2>
+			<!-- chip -->
+			 <div class="chips">
+				<div>Web design</div>
+				<div>Development</div>
+			 </div>
+		</div>
+		<Image src={KorbaImage} alt="Korba" width="660" height="520" />
+	</div>
   </div>
-  <div class={css(styles.darkPatternSection)}>
+  <div class={servicesStyles.darkPatternSection}></div>
+
+  <div class={awardsStyles.awardsWrapper}>
+    <div class={awardsStyles.awardsFlexContainer}>
+      <h2 class={awardsStyles.awardsHeading}>Awards</h2>
+
+      <ul class={awardsStyles.listOfAwards}>
+        <li class={awardsStyles.awardItem}>
+          <div>
+            <h3>2022 Designer of the year nomination</h3>
+            <p>AWWWARDS</p>
+          </div>
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 1.79663L2 19.7966M20 1.79663C20 1.79663 17.5 2.79663 12.5 2.79663C7.5 2.79663 5 1.79663 5 1.79663M20 1.79663C20 1.79663 19 4.29663 19 9.29663C19 14.2966 20 16.7966 20 16.7966"
+              stroke="#56514D"
+              stroke-width="2"
+              stroke-linecap="square"
+              stroke-linejoin="round"></path>
+          </svg>
+        </li>
+        <li class={awardsStyles.awardItem}>
+          <div>
+            <h3>Site of the day winner - Korba</h3>
+            <p>Web Design Inspiration Awards</p>
+          </div>
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 1.79663L2 19.7966M20 1.79663C20 1.79663 17.5 2.79663 12.5 2.79663C7.5 2.79663 5 1.79663 5 1.79663M20 1.79663C20 1.79663 19 4.29663 19 9.29663C19 14.2966 20 16.7966 20 16.7966"
+              stroke="#56514D"
+              stroke-width="2"
+              stroke-linecap="square"
+              stroke-linejoin="round"></path>
+          </svg>
+        </li>
+        <li class={awardsStyles.awardItem}>
+          <div>
+            <h3>Site of the month nomination - TrailHive</h3>
+            <p>CSS Design Awards</p>
+          </div>
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 1.79663L2 19.7966M20 1.79663C20 1.79663 17.5 2.79663 12.5 2.79663C7.5 2.79663 5 1.79663 5 1.79663M20 1.79663C20 1.79663 19 4.29663 19 9.29663C19 14.2966 20 16.7966 20 16.7966"
+              stroke="#56514D"
+              stroke-width="2"
+              stroke-linecap="square"
+              stroke-linejoin="round"></path>
+          </svg>
+        </li>
+        <li class={awardsStyles.awardItem}>
+          <div>
+            <h3>2021 Designer of the year nomination</h3>
+            <p>Pixel Awards</p>
+          </div>
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 1.79663L2 19.7966M20 1.79663C20 1.79663 17.5 2.79663 12.5 2.79663C7.5 2.79663 5 1.79663 5 1.79663M20 1.79663C20 1.79663 19 4.29663 19 9.29663C19 14.2966 20 16.7966 20 16.7966"
+              stroke="#56514D"
+              stroke-width="2"
+              stroke-linecap="square"
+              stroke-linejoin="round"></path>
+          </svg>
+        </li>
+      </ul>
+    </div>
   </div>
+
+  <footer class={footerStyles.wrapper}>
+    <div class={footerStyles.header}>
+      <Image class={footerStyles.logo} src={Logo} alt="Stephanie Holmes logo" />
+      <ul class={footerStyles.socialList}>
+        <li>
+          Linkedin
+
+          <svg
+            width="11"
+            height="10"
+            viewBox="0 0 11 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
+              stroke="#E9DEFF"
+              stroke-linecap="square"
+              stroke-linejoin="round"></path>
+          </svg>
+        </li>
+        <li>
+          Twitter
+
+          <svg
+            width="11"
+            height="10"
+            viewBox="0 0 11 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
+              stroke="#E9DEFF"
+              stroke-linecap="square"
+              stroke-linejoin="round"></path>
+          </svg>
+        </li>
+        <li>
+          Dribble
+
+          <svg
+            width="11"
+            height="10"
+            viewBox="0 0 11 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
+              stroke="#E9DEFF"
+              stroke-linecap="square"
+              stroke-linejoin="round"></path>
+          </svg>
+        </li>
+      </ul>
+    </div>
+
+    <div class={footerStyles.content}>
+      <h2 class={footerStyles.heading}>Interested in working together?</h2>
+      <Image
+        class={footerStyles.ctaImage}
+        src={LetsTalkNowImage}
+        alt="Let's talk now"
+      />
+    </div>
+
+    <div class={footerStyles.footer}>
+      <p class={footerStyles.footerText}>©2024 – All Rights Reserved</p>
+      <p class={footerStyles.footerText}>Available for freelance work</p>
+    </div>
+  </footer>
 </Layout>

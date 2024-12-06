@@ -69,8 +69,11 @@ export default defineConfig({
             value: "linear-gradient(93.26deg, #8338EC 10.4%, #9C2EF5 101.06%)"
           },
           border: {
-            value: "linear-gradient(0deg, #0B001A, #0B001A), linear-gradient(93.26deg, #8338EC 10.4%, #B923FF 101.06%)"
+            value: "linear-gradient(0deg, #0B001A, #0B001A), linear-gradient(93.26deg, #8338EC 10.4%, #B923FF 101.06%)",
           }
+        },
+        borders:{
+          bottomSide: { value: '1px solid #17003466' }
         },
         shadows: {
           all: { 
