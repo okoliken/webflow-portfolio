@@ -2,12 +2,13 @@
 import { buttonRecipe } from "../recipes/button";
 interface Props {
   variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md';
   class?: string;
 }
 
-const { variant = 'primary', class: className } = Astro.props;
+const { variant = 'primary', size = 'sm', class: className } = Astro.props;
 ---
 
-<button class={`${buttonRecipe({ variant })} ${className}`}>
+<button class={`${buttonRecipe({ variant, size })} ${className}`}>
   <slot />
 </button> 

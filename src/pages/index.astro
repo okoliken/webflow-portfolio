@@ -5,6 +5,9 @@ import ScrollDownImage from "../assets/image.png";
 import Logo from "../assets/NavbarBrand.png";
 import LetsTalkNowImage from "../assets/lets-talk-now.png";
 import KorbaImage from "../assets/korba.png";
+import TrailHiveImage from "../assets/trailhive.png";
+import SiteOfTheDay from "../assets/site-of-the-day.png";
+import Button from "../components/Button.astro";
 import {
   heroStyles,
   servicesStyles,
@@ -12,6 +15,7 @@ import {
   awardsStyles,
 } from "../styles";
 import "../index.css";
+import { css } from "../../styled-system/css";
 ---
 
 <Layout>
@@ -45,43 +49,213 @@ import "../index.css";
       <div>
         <h2 class={servicesStyles.serviceTitle}>Development</h2>
       </div>
-      <p class={servicesStyles.serviceDescription}>
-        I specialize in developing websites using Webflow, a powerful platform
-        that allows for easy customization and responsive design. I have
-        experience building websites for a variety of industries, from small
-        businesses to large corporations. My focus is always on creating
-        functional and smooth websites that generate traffic.
-      </p>
+      <div
+        class={css({
+          mt: "auto",
+          "& > div.chips": {
+            mt: "1.5rem",
+            display: "flex",
+            gap: "0.5rem",
+            h: "2.113rem",
+            color: "purpleDark",
+            fontSize: "base.small",
+            lineHeight: "snug",
+            fontWeight: "medium",
+          },
+          "& > .chips > div": {
+            border: "1px solid #FFFFFF",
+            py: "0.369rem",
+            px: "0.738rem",
+            color: "#FFFFFF",
+            borderRadius: "1.231rem",
+            fontSize: "base.small",
+            lineHeight: "snug",
+          },
+        })}
+      >
+        <p class={servicesStyles.serviceDescription}>
+          I specialize in developing websites using Webflow, a powerful platform
+          that allows for easy customization and responsive design. I have
+          experience building websites for a variety of industries, from small
+          businesses to large corporations. My focus is always on creating
+          functional and smooth websites that generate traffic.
+        </p>
+
+        <div class="chips">
+          <div>Webflow</div>
+          <div>Development</div>
+        </div>
+      </div>
     </div>
     <div class={servicesStyles.serviceCard}>
       <div>
         <h2 class={servicesStyles.serviceTitle}>Art direction</h2>
       </div>
-      <p class={servicesStyles.serviceDescription}>
-        Art direction is the process of bringing together all of the creative
-        elements of a project to create a cohesive and visually stunning end
-        product. I work with clients to develop a concept and bring it to life
-        through art direction. I believe that attention to detail and a clear
-        vision are key to creating truly memorable designs.
-      </p>
+      <div
+        class={css({
+          mt: "auto",
+          "& > div.chips": {
+            mt: "1.5rem",
+            display: "flex",
+            gap: "0.5rem",
+            h: "2.113rem",
+            color: "purpleDark",
+            fontSize: "base.small",
+            lineHeight: "snug",
+            fontWeight: "medium",
+          },
+          "& > .chips > div": {
+            border: "1px solid #FFFFFF",
+            py: "0.369rem",
+            px: "0.738rem",
+            color: "#FFFFFF",
+            borderRadius: "1.231rem",
+            fontSize: "base.small",
+            lineHeight: "snug",
+          },
+        })}
+      >
+        <p class={servicesStyles.serviceDescription}>
+          Art direction is the process of bringing together all of the creative
+          elements of a project to create a cohesive and visually stunning end
+          product. I work with clients to develop a concept and bring it to life
+          through art direction. I believe that attention to detail and a clear
+          vision are key to creating truly memorable designs.
+        </p>
+
+        <div class="chips">
+          <div>Concept design</div>
+          <div>Brand identity</div>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class={servicesStyles.lightPatternSection}>
-	<div class={servicesStyles.flexContainer}>
-		<div class={servicesStyles.caseStudy}>
-			<span>case study</span>
-			<h2>Korba</h2>
-			<!-- chip -->
-			 <div class="chips">
-				<div>Web design</div>
-				<div>Development</div>
-			 </div>
-		</div>
-		<Image src={KorbaImage} alt="Korba" width="660" height="520" />
-	</div>
+    <div class={servicesStyles.flexContainer}>
+      <div
+        class={css({
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
+        })}
+      >
+        <div class={servicesStyles.caseStudy}>
+          <span>case study</span>
+          <h2>Korba</h2>
+          <!-- chip -->
+          <div class="chips">
+            <div>Web design</div>
+            <div>Development</div>
+          </div>
+        </div>
+
+        <div
+          class={css({
+            mt: "auto",
+            display: "flex",
+            flexDirection: "column",
+            gap: "2rem",
+          })}
+        >
+          <p
+            class={css({
+              fontSize: "base.small",
+              lineHeight: "snug",
+              fontWeight: "light",
+              color: "purpleDark",
+            })}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Suspendisse
+            varius enim in eros elementum tristique. <br /> Duis cursus, mi quis
+            viverra ornare, eros dolor interdum <br /> nulla.
+          </p>
+
+          <Button variant="secondary" size="md"
+            >See case study
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 1.09326L1 11.0933M11 1.09326C11 1.09326 9.61111 1.64882 6.83333 1.64882C4.05556 1.64882 2.66667 1.09326 2.66667 1.09326M11 1.09326C11 1.09326 10.4444 2.48215 10.4444 5.25993C10.4444 8.03771 11 9.4266 11 9.4266"
+                stroke="#0B001A"
+                stroke-linecap="square"
+                stroke-linejoin="round"></path>
+            </svg>
+          </Button>
+        </div>
+      </div>
+      <Image src={KorbaImage} alt="Korba" width="660" height="520" />
+    </div>
   </div>
-  <div class={servicesStyles.darkPatternSection}></div>
+  <div class={servicesStyles.darkPatternSection}>
+    <div class={servicesStyles.flexContainer}>
+      <div
+        class={css({
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
+        })}
+      >
+        <div class={servicesStyles.otherSection}>
+          <span>case study</span>
+          <h2>TrailHive</h2>
+          <div class="chips">
+            <div>Concept design</div>
+            <div>Brand identity</div>
+          </div>
+        </div>
+
+        <div
+          class={css({
+            mt: "auto",
+            display: "flex",
+            flexDirection: "column",
+            gap: "2rem",
+          })}
+        >
+          <p
+            class={css({
+              fontSize: "base.small",
+              lineHeight: "snug",
+              fontWeight: "light",
+              color: "lavenderLight",
+            })}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+            Suspendisse varius enim in eros elementum tristique. <br />
+            Duis cursus, mi quis viverra ornare, eros dolor interdum <br />
+            nulla.
+          </p>
+
+          <Button size="md">
+            See case study
+            <svg
+              width="11"
+              height="10"
+              viewBox="0 0 11 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
+                stroke="#E9DEFF"
+                stroke-linecap="square"
+                stroke-linejoin="round"></path>
+            </svg>
+          </Button>
+        </div>
+      </div>
+      <div class={servicesStyles.imageWrapper}>
+        <Image src={TrailHiveImage} alt="Korba" width="660" height="520" />
+        <Image src={SiteOfTheDay} alt="Site of the day" width="660" height="520" />
+      </div>
+    </div>
+  </div>
 
   <div class={awardsStyles.awardsWrapper}>
     <div class={awardsStyles.awardsFlexContainer}>

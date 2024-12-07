@@ -94,6 +94,8 @@ export const heroStyles = {
       flexDirection: 'column',
       position:'relative',
       zIndex: 1,
+      gap:'1rem',
+      width:'100%',
       color:'purpleDark',
       "& > span": {
         fontSize: 'base.small',
@@ -103,7 +105,7 @@ export const heroStyles = {
       },
       "& > h2": {
         fontSize: 'base.heading',
-        lineHeight: 'title',
+        lineHeight: '3.125rem',
         letterSpacing: '-2%',
         fontWeight: 'medium'
       },
@@ -111,12 +113,58 @@ export const heroStyles = {
         display: 'flex',
         gap: '0.5rem',
         h:'2.113rem',
-        borderRadius: 'sm',
         bg: 'lavenderLight',
         color: 'purpleDark',
         fontSize: 'base.small',
         lineHeight: 'snug',
+        fontWeight: 'medium',
+      },
+      "& > .chips > div": {
+        border:'1px solid',
+        py:'0.369rem',
+        px:'0.738rem',
+        borderRadius: '1.231rem',
+        fontSize: 'base.small',
+        lineHeight: 'snug',
+      }
+    }),
+    otherSection: css({
+      display: 'flex',
+      flexDirection: 'column',
+      position: 'relative',
+      zIndex: 1,
+      gap: '1rem',
+      width: '100%',
+      color: 'lavenderLight',
+      "& > span": {
+        fontSize: 'base.small',
+        lineHeight: 'snug',
+        fontWeight: 'light',
+        textTransform: 'uppercase'
+      },
+      "& > h2": {
+        fontSize: 'base.heading',
+        lineHeight: '3.125rem',
+        letterSpacing: '-2%',
         fontWeight: 'medium'
+      },
+      "& > .chips": {
+        display: 'flex',
+        gap: '0.5rem',
+        h: '2.113rem',
+        bg: 'transparent',
+        color: 'lavenderLight',
+        fontSize: 'base.small',
+        lineHeight: 'snug',
+        fontWeight: 'medium',
+      },
+      "& > .chips > div": {
+        border: '1px solid',
+        py: '0.369rem',
+        px: '0.738rem',
+        borderRadius: '1.231rem',
+        fontSize: 'base.small',
+        lineHeight: 'snug',
       }
     }),
     lightPatternSection: css({
@@ -136,10 +184,20 @@ export const heroStyles = {
       backgroundSize: "cover",
       backgroundPosition: "center",
       color: "lavenderLight",
-      p: "2.5rem 0rem",
+      p: "2.5rem",
       borderRadius: "md",
       h: "37.5rem",
       mt: "2.5rem",
+    }),
+    imageWrapper: css({
+      position: 'relative',
+      '& > img:last-child': {
+        position: 'absolute',
+        top: '3.5rem',
+        left: '-3.5rem',
+        width: '144.83px',
+        height: '144.83px'
+      }
     }),
   }
 
@@ -147,10 +205,12 @@ export const heroStyles = {
   export const awardsStyles = {
     awardsWrapper: css({
       bg: "lavenderLight",
-      p: "2.5rem",
+      p: "3.75rem",
       borderRadius: "md",
       h: "32rem",
       mt: "2.5rem",
+      display: 'flex',
+      flexDirection: 'column',
     }),
     awardsFlexContainer: css({
       display:'flex',

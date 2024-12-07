@@ -4,33 +4,50 @@ export const buttonRecipe = cva({
   base: {
     display: 'flex',
     alignItems: 'center',
-    gap: '0.25rem',
+    justifyContent:'center',
+    gap: '0.625rem',
     p: '0.5rem',
-    w: '7.875rem',
+    w: {
+      sm: '7.875rem',
+      md: '10.5rem',
+    },
     h: '2.313rem',
     fontSize: 'base.small',
     fontWeight: 'medium',
     textTransform: 'uppercase',
     borderRadius: 'md',
-    border: '1px solid transparent',
-    boxShadow: 'shadows.all',
+    bg: 'transparent',
   },
   variants: {
     variant: {
       primary: {
-        bg: 'purpleDark',
+        bg: 'transparent',
+        backgroundImage: 'linear-gradient(90deg, #1E0044, #1E0044),linear-gradient(90deg, #8338EC, #B923FF)',
         color: 'lavenderLight',
-        backgroundImage: 'linear-gradient(purpleDark, purpleDark), gradients.secondary',
+        border: '1px solid transparent',
         backgroundOrigin: 'border-box',
-        backgroundClip: 'padding-box, border-box',
+        backgroundClip:'padding-box, border-box',
+        boxShadow: '0 0 10px 5px #A22DF71A',
       },
-      // You can add more variants here
       secondary: {
-        // Define secondary styles
+        bg: 'transparent',
+        color: 'purpleDark',
+        border: '1px solid',
+        borderImageSource: 'linear-gradient(0deg, #0B001A, #0B001A), linear-gradient(93.26deg, #8338EC 10.4%, #B923FF 101.06%)',
+        boxShadow: '0 0 10px 5px #A22DF71A',
+      }
+    },
+    size: {
+      sm: {
+        w: '7.875rem'
+      },
+      md: {
+        w: '10.5rem'
       }
     }
   },
   defaultVariants: {
-    variant: 'primary'
+    variant: 'primary',
+    size: 'sm'
   }
 }) 
