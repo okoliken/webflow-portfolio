@@ -66,10 +66,16 @@ export const heroStyles = {
       display: "flex",
       flexDirection: "column",
       gap: "1.5rem",
-      bgGradient: "secondary",
       p: "2.25rem",
       borderRadius: "md",
       h: "21.613rem",
+      
+      "&.dev": {
+        bgGradient: "secondary",
+      },
+      "&.art": {
+        bgGradient: "primary",
+      }
     }),
     serviceTitle: css({
       fontSize: "base.title",
