@@ -56,7 +56,7 @@ import { css } from "../../styled-system/css";
             mt: "1.5rem",
             display: "flex",
             gap: "0.5rem",
-            h: "2.113rem",
+            h: {base: "1.8rem", md: "2.113rem"},
             color: "purpleDark",
             fontSize: "base.small",
             lineHeight: "snug",
@@ -64,11 +64,11 @@ import { css } from "../../styled-system/css";
           },
           "& > .chips > div": {
             border: "1px solid #FFFFFF",
-            py: "0.369rem",
-            px: "0.738rem",
+            py: {base: "0.1rem", md: "0.369rem"},
+            px: {base: "0.5rem", md: "0.738rem"},
             color: "#FFFFFF",
             borderRadius: "1.231rem",
-            fontSize: "base.small",
+            fontSize: {base: "0.75rem", md: "base.small"},
             lineHeight: "snug",
           },
         })}
@@ -110,7 +110,7 @@ import { css } from "../../styled-system/css";
             px: "0.738rem",
             color: "#FFFFFF",
             borderRadius: "1.231rem",
-            fontSize: "base.small",
+            fontSize: {base: "0.75rem", md: "base.small"},
             lineHeight: "snug",
           },
         })}
@@ -164,6 +164,9 @@ import { css } from "../../styled-system/css";
               lineHeight: "snug",
               fontWeight: "light",
               color: "purpleDark",
+              "& > br": {
+                display: {base: "none", md: "block"},
+              },
             })}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Suspendisse

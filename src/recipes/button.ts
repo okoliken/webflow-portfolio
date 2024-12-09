@@ -12,11 +12,14 @@ export const buttonRecipe = cva({
       md: '10.5rem',
     },
     h: '2.313rem',
-    fontSize: 'base.small',
+    fontSize: {base: '0.75rem', md: 'base.small'},
     fontWeight: 'medium',
     textTransform: 'uppercase',
     borderRadius: 'md',
     bg: 'transparent',
+    "& > svg": {
+     fontSize: {base: '0.75rem', md: 'base.small'},
+    }
   },
   variants: {
     variant: {

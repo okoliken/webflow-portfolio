@@ -1,55 +1,23 @@
 ---
-import { css } from "../../styled-system/css";
 import Logo from "../assets/NavbarBrand.png";
 import { Image } from "astro:assets";
 import Button from "./Button.astro";
+import { headerStyles } from "./styles";
 ---
 
 <header
-  class={css({
-    bg: "purpleDark",
-    color: "lavenderLight",
-    p: "1.25rem 2.5rem",
-    borderTopLeftRadius: "md",
-    borderTopRightRadius: "md",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-  })}
+  class={headerStyles.wrapper}
 >
   <div>
     <Image
-      class={css({
-        width: "10.813rem",
-        height: "1.609rem",
-        objectFit: "contain",
-        userSelect: "none",
-      })}
+      class={headerStyles.logo}
       src={Logo}
       alt="Stephanie Holmes logo"
     />
   </div>
 
   <ul
-    class={css({
-      display: "flex",
-      alignItems: "center",
-      "& > li": {
-        p: "0.75rem",
-        display: "flex",
-        alignItems: "center",
-        gap: "0.25rem",
-        textTransform: "uppercase",
-        _hover: {
-          color: "lavenderLight",
-          textDecoration: "underline",
-          cursor: "pointer",
-        },
-        fontSize: "base.small",
-        fontWeight: "medium",
-      },
-      gap: "0 1.25rem",
-    })}
+    class={headerStyles.nav}
   >
     <li>
       Linkedin
