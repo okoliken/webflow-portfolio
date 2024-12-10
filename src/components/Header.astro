@@ -1,24 +1,36 @@
 ---
-import Logo from "../assets/NavbarBrand.png";
 import { Image } from "astro:assets";
-import Button from "./Button.astro";
+import Logo from "../assets/NavbarBrand.png";
 import { headerStyles } from "./styles";
+import Button from "./Button.astro";
 ---
 
-<header
-  class={headerStyles.wrapper}
->
-  <div>
-    <Image
-      class={headerStyles.logo}
-      src={Logo}
-      alt="Stephanie Holmes logo"
-    />
+<header class={headerStyles.wrapper}>
+  <div class={headerStyles.header}>
+    <Image class={headerStyles.logo} src={Logo} alt="Stephanie Holmes logo" />
+    <button
+      class={headerStyles.menuButton}
+      aria-label="Toggle menu"
+      id="menuButton"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-align-justify"
+        ><path d="M3 12h18"></path><path d="M3 18h18"></path><path d="M3 6h18"
+        ></path></svg
+      >
+    </button>
   </div>
 
-  <ul
-    class={headerStyles.nav}
-  >
+  <ul class={headerStyles.nav} id="mobileNav">
     <li>
       Linkedin
 
@@ -72,17 +84,34 @@ import { headerStyles } from "./styles";
     </li>
   </ul>
 
-  <Button>Let’s talk  <svg
-    width="11"
-    height="10"
-    viewBox="0 0 11 10"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
+  <Button class={headerStyles.contactButton}
+    >Let's talk <svg
+      width="11"
+      height="10"
+      viewBox="0 0 11 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
+        stroke="#E9DEFF"
+        stroke-linecap="square"
+        stroke-linejoin="round"></path>
+    </svg></Button
   >
-    <path
-      d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
-      stroke="#E9DEFF"
-      stroke-linecap="square"
-      stroke-linejoin="round"></path>
-  </svg></Button>
 </header>
+
+<script>
+  const menuButton = document.getElementById("menuButton");
+  const mobileNav = document.getElementById("mobileNav");
+  const header = document.querySelector("header");
+
+  menuButton?.addEventListener("click", () => {
+    mobileNav?.classList.toggle("active");
+    header?.classList.toggle("menu-open");
+    menuButton.setAttribute(
+      "aria-expanded",
+      (mobileNav?.classList.contains("active") ?? false).toString()
+    );
+  });
+</script>
