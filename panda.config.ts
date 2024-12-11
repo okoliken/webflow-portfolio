@@ -18,9 +18,11 @@ const globalStyles = defineGlobalStyles({
   '.scroll-snap-container': {
     scrollSnapType: 'y mandatory',
     overflowY: 'scroll',
+    scrollBehavior: 'smooth',
   },
   '.scroll-snap-child': {
     scrollSnapAlign: 'center',
+    scrollSnapStop: 'always',
   },
 });
 

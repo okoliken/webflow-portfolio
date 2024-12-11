@@ -7,7 +7,7 @@ export const heroStyles = {
     p: { base: "1.5rem", md: "2.5rem" },
     borderBottomLeftRadius: "md",
     borderBottomRightRadius: "md",
-    minHeight: { base: "calc(100vh - 200px)", md: "37.375rem" },
+    minHeight: { base: "calc(100vh - 330px)", md: "37.375rem" },
     display: "flex",
     flexDirection: "column",
     alignItems: "start",
@@ -48,6 +48,9 @@ export const heroStyles = {
     lineHeight: { base: "22px", md: "base" },
     mt: { base: "1rem", md: "1.5rem" },
     maxWidth: { base: "100%", md: "90%", lg: "80%" },
+    "& > br": { 
+      display: {base: "none", md: "block"},
+    }
   }),
 
   footer: css({
