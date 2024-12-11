@@ -36,7 +36,7 @@ import { css } from "../../styled-system/css";
         <div class={heroStyles.footer} id="hero-footer">
           <p class={heroStyles.availabilityText}>Available for freelance work</p>
           <Image
-            class={heroStyles.scrollImage}
+            class={`${heroStyles.scrollImage} scroll-image-glow`}
             draggable={false}
             src={ScrollDownImage}
             alt="Decorative image"
@@ -430,6 +430,17 @@ import { css } from "../../styled-system/css";
   </div>
 </Layout>
 
+<style>
+  .scroll-image-glow {
+    filter: drop-shadow(0 0 8px rgba(233, 222, 255, 0));
+    transition: filter 0.5s ease;
+  }
+
+  .scroll-image-glow.active {
+    filter: drop-shadow(0 0 8px rgba(233, 222, 255, 0.5));
+  }
+</style>
+
 <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -462,6 +473,26 @@ import { css } from "../../styled-system/css";
       y: 0,
       duration: 0.8
     }, "-=0.5");
+
+    // Scroll image bounce and glow animation
+    const scrollImage = document.querySelector('.scroll-image-glow');
+    
+    // Continuous bounce animation
+    gsap.to(scrollImage, {
+      y: -10,
+      duration: 1.5,
+      ease: "power1.inOut",
+      yoyo: true,
+      repeat: -1
+    });
+
+    // Glow effect
+    function toggleGlow() {
+      scrollImage?.classList.toggle('active');
+    }
+
+    // Toggle glow effect every 2 seconds
+    setInterval(toggleGlow, 2000);
 
     // Services section animation
     gsap.from(".services-item", {
