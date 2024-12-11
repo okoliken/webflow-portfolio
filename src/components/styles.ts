@@ -58,11 +58,12 @@ export const headerStyles = {
     
     position: { base: "absolute", md: "static" },
     top: { base: "100%", md: "auto" },
+    zIndex: { base: 1, md: "auto" },
     left: { base: 0, md: "auto" },
     right: { base: 0, md: "auto" },
     bg: { base: "purpleDark", md: "transparent" },
     py: { base: "1rem", md: 0 },
-    opacity: { base: 0, md: 1 },
+    opacity: { base: 1, md: 1 },
     visibility: { base: "hidden", md: "visible" },
     transform: { base: "translateY(-0.5rem)", md: "none" },
     borderBottomLeftRadius: { base: "md", md: "0" },
