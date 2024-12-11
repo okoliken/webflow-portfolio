@@ -19,406 +19,497 @@ import { css } from "../../styled-system/css";
 ---
 
 <Layout>
-  <div class={heroStyles.container}>
-    <div class={heroStyles.contentWrapper}>
-      <h1 class={heroStyles.heading}>
-        I create <span class={heroStyles.highlightedText}>beautiful</span>
-        <br /> experiences
-      </h1>
-      <p class={heroStyles.subtitle}>
-        I work with people all over the world to create <br /> tailor-made Webflow
-        experiences
-      </p>
-    </div>
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <div class={heroStyles.container}>
+        <div class={heroStyles.contentWrapper} id="hero-content">
+          <h1 class={heroStyles.heading}>
+            I create <span class={heroStyles.highlightedText}>beautiful</span>
+            <br /> experiences
+          </h1>
+          <p class={heroStyles.subtitle}>
+            I work with people all over the world to create <br /> tailor-made Webflow
+            experiences
+          </p>
+        </div>
 
-    <div class={heroStyles.footer}>
-      <p class={heroStyles.availabilityText}>Available for freelance work</p>
-      <Image
-        class={heroStyles.scrollImage}
-        draggable={false}
-        src={ScrollDownImage}
-        alt="Decorative image"
-        width="106"
-        height="106"
-      />
-    </div>
-  </div>
-
-  <div class={servicesStyles.servicesGrid}>
-    <div class={`${servicesStyles.serviceCard} dev`}>
-      <div>
-        <h2 class={servicesStyles.serviceTitle}>Development</h2>
-      </div>
-      <div
-        class={css({
-          mt: "auto",
-          "& > div.chips": {
-            mt: "1.5rem",
-            display: "flex",
-            gap: "0.5rem",
-            h: {base: "1.8rem", md: "2.113rem"},
-            color: "purpleDark",
-            fontSize: "base.small",
-            lineHeight: "snug",
-            fontWeight: "medium",
-          },
-          "& > .chips > div": {
-            border: "1px solid #FFFFFF",
-            py: {base: "0.1rem", md: "0.369rem"},
-            px: {base: "0.5rem", md: "0.738rem"},
-            color: "#FFFFFF",
-            borderRadius: "1.231rem",
-            fontSize: {base: "0.75rem", md: "base.small"},
-            lineHeight: "snug",
-          },
-        })}
-      >
-        <p class={servicesStyles.serviceDescription}>
-          I specialize in developing websites using Webflow, a powerful platform
-          that allows for easy customization and responsive design. I have
-          experience building websites for a variety of industries, from small
-          businesses to large corporations. My focus is always on creating
-          functional and smooth websites that generate traffic.
-        </p>
-
-        <div class="chips">
-          <div>Webflow</div>
-          <div>Development</div>
+        <div class={heroStyles.footer} id="hero-footer">
+          <p class={heroStyles.availabilityText}>Available for freelance work</p>
+          <Image
+            class={heroStyles.scrollImage}
+            draggable={false}
+            src={ScrollDownImage}
+            alt="Decorative image"
+            width="106"
+            height="106"
+          />
         </div>
       </div>
-    </div>
-    <div class={`${servicesStyles.serviceCard} art`}>
-      <div>
-        <h2 class={servicesStyles.serviceTitle}>Art direction</h2>
-      </div>
-      <div
-        class={css({
-          mt: "auto",
-          "& > div.chips": {
-            mt: "1.5rem",
-            display: "flex",
-            gap: "0.5rem",
-            h: "2.113rem",
-            color: "purpleDark",
-            fontSize: "base.small",
-            lineHeight: "snug",
-            fontWeight: "medium",
-          },
-          "& > .chips > div": {
-            border: "1px solid #FFFFFF",
-            py: "0.369rem",
-            px: "0.738rem",
-            color: "#FFFFFF",
-            borderRadius: "1.231rem",
-            fontSize: {base: "0.75rem", md: "base.small"},
-            lineHeight: "snug",
-          },
-        })}
-      >
-        <p class={servicesStyles.serviceDescription}>
-          Art direction is the process of bringing together all of the creative
-          elements of a project to create a cohesive and visually stunning end
-          product. I work with clients to develop a concept and bring it to life
-          through art direction. I believe that attention to detail and a clear
-          vision are key to creating truly memorable designs.
-        </p>
 
-        <div class="chips">
-          <div>Concept design</div>
-          <div>Brand identity</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class={servicesStyles.lightPatternSection}>
-    <div class={servicesStyles.flexContainer}>
-      <div
-        class={css({
-          display: "flex",
-          flexDirection: "column",
-          gap: "1rem",
-        })}
-      >
-        <div class={servicesStyles.caseStudy}>
-          <span>case study</span>
-          <h2>Korba</h2>
-          <!-- chip -->
-          <div class="chips">
-            <div>Web design</div>
-            <div>Development</div>
+      <div class={servicesStyles.servicesGrid}>
+        <div class={`${servicesStyles.serviceCard} dev services-item`}>
+          <div>
+            <h2 class={servicesStyles.serviceTitle}>Development</h2>
           </div>
-        </div>
-
-        <div
-          class={css({
-            mt: "auto",
-            display: "flex",
-            flexDirection: "column",
-            gap: "2rem",
-          })}
-        >
-          <p
+          <div
             class={css({
-              fontSize: "base.small",
-              lineHeight: "snug",
-              fontWeight: "light",
-              color: "purpleDark",
-              "& > br": {
-                display: {base: "none", md: "block"},
+              mt: "auto",
+              "& > div.chips": {
+                mt: "1.5rem",
+                display: "flex",
+                gap: "0.5rem",
+                h: {base: "1.8rem", md: "2.113rem"},
+                color: "purpleDark",
+                fontSize: "base.small",
+                lineHeight: "snug",
+                fontWeight: "medium",
+              },
+              "& > .chips > div": {
+                border: "1px solid #FFFFFF",
+                py: {base: "0.1rem", md: "0.369rem"},
+                px: {base: "0.5rem", md: "0.738rem"},
+                color: "#FFFFFF",
+                borderRadius: "1.231rem",
+                fontSize: {base: "0.75rem", md: "base.small"},
+                lineHeight: "snug",
               },
             })}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Suspendisse
-            varius enim in eros elementum tristique. <br /> Duis cursus, mi quis
-            viverra ornare, eros dolor interdum <br /> nulla.
-          </p>
+            <p class={servicesStyles.serviceDescription}>
+              I specialize in developing websites using Webflow, a powerful platform
+              that allows for easy customization and responsive design. I have
+              experience building websites for a variety of industries, from small
+              businesses to large corporations. My focus is always on creating
+              functional and smooth websites that generate traffic.
+            </p>
 
-          <Button variant="secondary" size="md"
-            >See case study
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11 1.09326L1 11.0933M11 1.09326C11 1.09326 9.61111 1.64882 6.83333 1.64882C4.05556 1.64882 2.66667 1.09326 2.66667 1.09326M11 1.09326C11 1.09326 10.4444 2.48215 10.4444 5.25993C10.4444 8.03771 11 9.4266 11 9.4266"
-                stroke="#0B001A"
-                stroke-linecap="square"
-                stroke-linejoin="round"></path>
-            </svg>
-          </Button>
-        </div>
-      </div>
-      <Image src={KorbaImage} alt="Korba" width="660" height="520" />
-    </div>
-  </div>
-  <div class={servicesStyles.darkPatternSection}>
-    <div class={servicesStyles.flexContainer}>
-      <div
-        class={css({
-          display: "flex",
-          flexDirection: "column",
-          gap: "1rem",
-        })}
-      >
-        <div class={servicesStyles.otherSection}>
-          <span>case study</span>
-          <h2>TrailHive</h2>
-          <div class="chips">
-            <div>Concept design</div>
-            <div>Brand identity</div>
+            <div class="chips">
+              <div>Webflow</div>
+              <div>Development</div>
+            </div>
           </div>
         </div>
-
-        <div
-          class={css({
-            mt: "auto",
-            display: "flex",
-            flexDirection: "column",
-            gap: "2rem",
-          })}
-        >
-          <p
+        <div class={`${servicesStyles.serviceCard} art services-item`}>
+          <div>
+            <h2 class={servicesStyles.serviceTitle}>Art direction</h2>
+          </div>
+          <div
             class={css({
-              fontSize: "base.small",
-              lineHeight: "snug",
-              fontWeight: "light",
-              color: "lavenderLight",
+              mt: "auto",
+              "& > div.chips": {
+                mt: "1.5rem",
+                display: "flex",
+                gap: "0.5rem",
+                h: "2.113rem",
+                color: "purpleDark",
+                fontSize: "base.small",
+                lineHeight: "snug",
+                fontWeight: "medium",
+              },
+              "& > .chips > div": {
+                border: "1px solid #FFFFFF",
+                py: "0.369rem",
+                px: "0.738rem",
+                color: "#FFFFFF",
+                borderRadius: "1.231rem",
+                fontSize: {base: "0.75rem", md: "base.small"},
+                lineHeight: "snug",
+              },
             })}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-            Suspendisse varius enim in eros elementum tristique. <br />
-            Duis cursus, mi quis viverra ornare, eros dolor interdum <br />
-            nulla.
-          </p>
+            <p class={servicesStyles.serviceDescription}>
+              Art direction is the process of bringing together all of the creative
+              elements of a project to create a cohesive and visually stunning end
+              product. I work with clients to develop a concept and bring it to life
+              through art direction. I believe that attention to detail and a clear
+              vision are key to creating truly memorable designs.
+            </p>
 
-          <Button size="md">
-            See case study
-            <svg
-              width="11"
-              height="10"
-              viewBox="0 0 11 10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
-                stroke="#E9DEFF"
-                stroke-linecap="square"
-                stroke-linejoin="round"></path>
-            </svg>
-          </Button>
+            <div class="chips">
+              <div>Concept design</div>
+              <div>Brand identity</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class={servicesStyles.imageWrapper}>
-        <Image src={TrailHiveImage} alt="Korba" width="660" height="520" />
-        <Image src={SiteOfTheDay} alt="Site of the day" width="660" height="520" />
+
+      <div class={servicesStyles.lightPatternSection}>
+        <div class={servicesStyles.flexContainer}>
+          <div
+            class={css({
+              display: "flex",
+              flexDirection: "column",
+              gap: "1rem",
+            }) + " services-item"}
+          >
+            <div class={servicesStyles.caseStudy}>
+              <span>case study</span>
+              <h2>Korba</h2>
+              <div class="chips">
+                <div>Web design</div>
+                <div>Development</div>
+              </div>
+            </div>
+
+            <div
+              class={css({
+                mt: "auto",
+                display: "flex",
+                flexDirection: "column",
+                gap: "2rem",
+              })}
+            >
+              <p
+                class={css({
+                  fontSize: "base.small",
+                  lineHeight: "snug",
+                  fontWeight: "light",
+                  color: "purpleDark",
+                  "& > br": {
+                    display: {base: "none", md: "block"},
+                  },
+                })}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Suspendisse
+                varius enim in eros elementum tristique. <br /> Duis cursus, mi quis
+                viverra ornare, eros dolor interdum <br /> nulla.
+              </p>
+
+              <Button variant="secondary" size="md"
+                >See case study
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 1.09326L1 11.0933M11 1.09326C11 1.09326 9.61111 1.64882 6.83333 1.64882C4.05556 1.64882 2.66667 1.09326 2.66667 1.09326M11 1.09326C11 1.09326 10.4444 2.48215 10.4444 5.25993C10.4444 8.03771 11 9.4266 11 9.4266"
+                    stroke="#0B001A"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </Button>
+            </div>
+          </div>
+          <Image src={KorbaImage} alt="Korba" width="660" height="520" class="services-item" />
+        </div>
       </div>
+
+      <div class={servicesStyles.darkPatternSection}>
+        <div class={servicesStyles.flexContainer}>
+          <div
+            class={css({
+              display: "flex",
+              flexDirection: "column",
+              gap: "1rem",
+            }) + " project-item"}
+          >
+            <div class={servicesStyles.otherSection}>
+              <span>case study</span>
+              <h2>TrailHive</h2>
+              <div class="chips">
+                <div>Concept design</div>
+                <div>Brand identity</div>
+              </div>
+            </div>
+
+            <div
+              class={css({
+                mt: "auto",
+                display: "flex",
+                flexDirection: "column",
+                gap: "2rem",
+              })}
+            >
+              <p
+                class={css({
+                  fontSize: "base.small",
+                  lineHeight: "snug",
+                  fontWeight: "light",
+                  color: "lavenderLight",
+                })}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+                Suspendisse varius enim in eros elementum tristique. <br />
+                Duis cursus, mi quis viverra ornare, eros dolor interdum <br />
+                nulla.
+              </p>
+
+              <Button size="md">
+                See case study
+                <svg
+                  width="11"
+                  height="10"
+                  viewBox="0 0 11 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
+                    stroke="#E9DEFF"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </Button>
+            </div>
+          </div>
+          <div class={servicesStyles.imageWrapper + " project-item"}>
+            <Image src={TrailHiveImage} alt="Korba" width="660" height="520" />
+            <Image src={SiteOfTheDay} alt="Site of the day" width="660" height="520" />
+          </div>
+        </div>
+      </div>
+
+      <div class={awardsStyles.awardsWrapper}>
+        <div class={awardsStyles.awardsFlexContainer}>
+          <h2 class={`${awardsStyles.awardsHeading} awards-item`}>Awards</h2>
+
+          <ul class={awardsStyles.listOfAwards}>
+            <li class={`${awardsStyles.awardItem} awards-item`}>
+              <div>
+                <h3>2022 Designer of the year nomination</h3>
+                <p>AWWWWARDS</p>
+              </div>
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 1.79663L2 19.7966M20 1.79663C20 1.79663 17.5 2.79663 12.5 2.79663C7.5 2.79663 5 1.79663 5 1.79663M20 1.79663C20 1.79663 19 4.29663 19 9.29663C19 14.2966 20 16.7966 20 16.7966"
+                  stroke="#56514D"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </li>
+            <li class={`${awardsStyles.awardItem} awards-item`}>
+              <div>
+                <h3>Site of the day winner - Korba</h3>
+                <p>Web Design Inspiration Awards</p>
+              </div>
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 1.79663L2 19.7966M20 1.79663C20 1.79663 17.5 2.79663 12.5 2.79663C7.5 2.79663 5 1.79663 5 1.79663M20 1.79663C20 1.79663 19 4.29663 19 9.29663C19 14.2966 20 16.7966 20 16.7966"
+                  stroke="#56514D"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </li>
+            <li class={`${awardsStyles.awardItem} awards-item`}>
+              <div>
+                <h3>Site of the month nomination - TrailHive</h3>
+                <p>CSS Design Awards</p>
+              </div>
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 1.79663L2 19.7966M20 1.79663C20 1.79663 17.5 2.79663 12.5 2.79663C7.5 2.79663 5 1.79663 5 1.79663M20 1.79663C20 1.79663 19 4.29663 19 9.29663C19 14.2966 20 16.7966 20 16.7966"
+                  stroke="#56514D"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </li>
+            <li class={`${awardsStyles.awardItem} awards-item`}>
+              <div>
+                <h3>2021 Designer of the year nomination</h3>
+                <p>Pixel Awards</p>
+              </div>
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 1.79663L2 19.7966M20 1.79663C20 1.79663 17.5 2.79663 12.5 2.79663C7.5 2.79663 5 1.79663 5 1.79663M20 1.79663C20 1.79663 19 4.29663 19 9.29663C19 14.2966 20 16.7966 20 16.7966"
+                  stroke="#56514D"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class={footerStyles.wrapper}>
+        <div class={footerStyles.header}>
+          <Image class={footerStyles.logo} src={Logo} alt="Stephanie Holmes logo" />
+          <ul class={footerStyles.socialList}>
+            <li>
+              Linkedin
+
+              <svg
+                width="11"
+                height="10"
+                viewBox="0 0 11 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
+                  stroke="#E9DEFF"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </li>
+            <li>
+              Twitter
+
+              <svg
+                width="11"
+                height="10"
+                viewBox="0 0 11 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
+                  stroke="#E9DEFF"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </li>
+            <li>
+              Dribble
+
+              <svg
+                width="11"
+                height="10"
+                viewBox="0 0 11 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
+                  stroke="#E9DEFF"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </li>
+          </ul>
+        </div>
+
+        <div class={footerStyles.content}>
+          <h2 class={footerStyles.heading}>Interested in working together?</h2>
+          <Image
+            class={footerStyles.ctaImage}
+            src={LetsTalkNowImage}
+            alt="Let's talk now"
+          />
+        </div>
+
+        <div class={footerStyles.footer}>
+          <p class={footerStyles.footerText}> 2024 – All Rights Reserved</p>
+          <p class={footerStyles.footerText}>Available for freelance work</p>
+        </div>
+      </footer>
     </div>
   </div>
-
-  <div class={awardsStyles.awardsWrapper}>
-    <div class={awardsStyles.awardsFlexContainer}>
-      <h2 class={awardsStyles.awardsHeading}>Awards</h2>
-
-      <ul class={awardsStyles.listOfAwards}>
-        <li class={awardsStyles.awardItem}>
-          <div>
-            <h3>2022 Designer of the year nomination</h3>
-            <p>AWWWARDS</p>
-          </div>
-          <svg
-            width="22"
-            height="22"
-            viewBox="0 0 22 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M20 1.79663L2 19.7966M20 1.79663C20 1.79663 17.5 2.79663 12.5 2.79663C7.5 2.79663 5 1.79663 5 1.79663M20 1.79663C20 1.79663 19 4.29663 19 9.29663C19 14.2966 20 16.7966 20 16.7966"
-              stroke="#56514D"
-              stroke-width="2"
-              stroke-linecap="square"
-              stroke-linejoin="round"></path>
-          </svg>
-        </li>
-        <li class={awardsStyles.awardItem}>
-          <div>
-            <h3>Site of the day winner - Korba</h3>
-            <p>Web Design Inspiration Awards</p>
-          </div>
-          <svg
-            width="22"
-            height="22"
-            viewBox="0 0 22 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M20 1.79663L2 19.7966M20 1.79663C20 1.79663 17.5 2.79663 12.5 2.79663C7.5 2.79663 5 1.79663 5 1.79663M20 1.79663C20 1.79663 19 4.29663 19 9.29663C19 14.2966 20 16.7966 20 16.7966"
-              stroke="#56514D"
-              stroke-width="2"
-              stroke-linecap="square"
-              stroke-linejoin="round"></path>
-          </svg>
-        </li>
-        <li class={awardsStyles.awardItem}>
-          <div>
-            <h3>Site of the month nomination - TrailHive</h3>
-            <p>CSS Design Awards</p>
-          </div>
-          <svg
-            width="22"
-            height="22"
-            viewBox="0 0 22 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M20 1.79663L2 19.7966M20 1.79663C20 1.79663 17.5 2.79663 12.5 2.79663C7.5 2.79663 5 1.79663 5 1.79663M20 1.79663C20 1.79663 19 4.29663 19 9.29663C19 14.2966 20 16.7966 20 16.7966"
-              stroke="#56514D"
-              stroke-width="2"
-              stroke-linecap="square"
-              stroke-linejoin="round"></path>
-          </svg>
-        </li>
-        <li class={awardsStyles.awardItem}>
-          <div>
-            <h3>2021 Designer of the year nomination</h3>
-            <p>Pixel Awards</p>
-          </div>
-          <svg
-            width="22"
-            height="22"
-            viewBox="0 0 22 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M20 1.79663L2 19.7966M20 1.79663C20 1.79663 17.5 2.79663 12.5 2.79663C7.5 2.79663 5 1.79663 5 1.79663M20 1.79663C20 1.79663 19 4.29663 19 9.29663C19 14.2966 20 16.7966 20 16.7966"
-              stroke="#56514D"
-              stroke-width="2"
-              stroke-linecap="square"
-              stroke-linejoin="round"></path>
-          </svg>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <footer class={footerStyles.wrapper}>
-    <div class={footerStyles.header}>
-      <Image class={footerStyles.logo} src={Logo} alt="Stephanie Holmes logo" />
-      <ul class={footerStyles.socialList}>
-        <li>
-          Linkedin
-
-          <svg
-            width="11"
-            height="10"
-            viewBox="0 0 11 10"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
-              stroke="#E9DEFF"
-              stroke-linecap="square"
-              stroke-linejoin="round"></path>
-          </svg>
-        </li>
-        <li>
-          Twitter
-
-          <svg
-            width="11"
-            height="10"
-            viewBox="0 0 11 10"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
-              stroke="#E9DEFF"
-              stroke-linecap="square"
-              stroke-linejoin="round"></path>
-          </svg>
-        </li>
-        <li>
-          Dribble
-
-          <svg
-            width="11"
-            height="10"
-            viewBox="0 0 11 10"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.5 1L1.5 9M9.5 1C9.5 1 8.38889 1.44444 6.16667 1.44444C3.94444 1.44444 2.83333 1 2.83333 1M9.5 1C9.5 1 9.05556 2.11111 9.05556 4.33333C9.05556 6.55556 9.5 7.66667 9.5 7.66667"
-              stroke="#E9DEFF"
-              stroke-linecap="square"
-              stroke-linejoin="round"></path>
-          </svg>
-        </li>
-      </ul>
-    </div>
-
-    <div class={footerStyles.content}>
-      <h2 class={footerStyles.heading}>Interested in working together?</h2>
-      <Image
-        class={footerStyles.ctaImage}
-        src={LetsTalkNowImage}
-        alt="Let's talk now"
-      />
-    </div>
-
-    <div class={footerStyles.footer}>
-      <p class={footerStyles.footerText}>©2024 – All Rights Reserved</p>
-      <p class={footerStyles.footerText}>Available for freelance work</p>
-    </div>
-  </footer>
 </Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initial hero animation
+    gsap.set("#hero-content > *", { 
+      opacity: 0,
+      y: 50
+    });
+    
+    gsap.set("#hero-footer", {
+      opacity: 0,
+      y: 30
+    });
+
+    // Create the animation timeline for hero section
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" }});
+
+    tl.to("#hero-content > *", {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.2
+    })
+    .to("#hero-footer", {
+      opacity: 1,
+      y: 0,
+      duration: 0.8
+    }, "-=0.5");
+
+    // Services section animation
+    gsap.from(".services-item", {
+      scrollTrigger: {
+        trigger: ".services-item",
+        start: "top 80%",
+        once: true // Only run once
+      },
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2
+    });
+
+    // Projects animation
+    gsap.from(".project-item", {
+      scrollTrigger: {
+        trigger: ".project-item",
+        start: "top 75%",
+        once: true // Only run once
+      },
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.3
+    });
+
+    // Awards section animation
+    gsap.from(".awards-item", {
+      scrollTrigger: {
+        trigger: ".awards-item",
+        start: "top 80%",
+        once: true // Only run once
+      },
+      x: -30,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.15
+    });
+
+    // Footer animation
+    gsap.from("footer > *", {
+      scrollTrigger: {
+        trigger: "footer",
+        start: "top 85%",
+        once: true // Only run once
+      },
+      y: 20,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2
+    });
+  });
+</script>
