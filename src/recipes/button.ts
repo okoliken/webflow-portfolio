@@ -19,6 +19,11 @@ export const buttonRecipe = cva({
     bg: 'transparent',
     "& > svg": {
      fontSize: {base: '0.75rem', md: 'base.small'},
+    },
+    _hover: {
+      cursor: "pointer",
+      boxShadow: '0 0 30px 15px rgba(162, 45, 247, 0.2)',
+      transition: 'box-shadow 0.3s ease-in-out'
     }
   },
   variants: {
