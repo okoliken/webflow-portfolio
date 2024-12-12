@@ -415,9 +415,11 @@ import { css } from "../../styled-system/css";
         <div class={footerStyles.content}>
           <h2 class={footerStyles.heading}>Interested in working together?</h2>
           <Image
-            class={footerStyles.ctaImage}
+            class={`${footerStyles.ctaImage} scroll-image-glow`}
             src={LetsTalkNowImage}
             alt="Let's talk now"
+            draggable="false"
+
           />
         </div>
 
@@ -475,7 +477,7 @@ import { css } from "../../styled-system/css";
     }, "-=0.5");
 
     // Scroll image bounce and glow animation
-    const scrollImage = document.querySelector('.scroll-image-glow');
+    const scrollImage = document.querySelectorAll('.scroll-image-glow');
     
     // Continuous bounce animation
     gsap.to(scrollImage, {
@@ -488,7 +490,9 @@ import { css } from "../../styled-system/css";
 
     // Glow effect
     function toggleGlow() {
-      scrollImage?.classList.toggle('active');
+      scrollImage.forEach((image) => {
+        image.classList.toggle('active');
+      });
     }
 
     // Toggle glow effect every 2 seconds

@@ -19,6 +19,16 @@ const globalStyles = defineGlobalStyles({
     scrollSnapType: 'y mandatory',
     overflowY: 'scroll',
     scrollBehavior: 'smooth',
+    maxWidth:'1500px',
+    margin:'0 auto',
+    '@media (min-width: 1440px)': {
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      maxWidth: 'container',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      position: 'relative',
+    }
   },
   '.scroll-snap-child': {
     scrollSnapAlign: 'center',
@@ -103,4 +113,5 @@ export default defineConfig({
 
   outdir: "styled-system",
   globalCss: globalStyles,
+  hash:true
 });

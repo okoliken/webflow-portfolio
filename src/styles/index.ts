@@ -7,7 +7,7 @@ export const heroStyles = {
     p: { base: "1.5rem", md: "2.5rem" },
     borderBottomLeftRadius: "md",
     borderBottomRightRadius: "md",
-    minHeight: { base: "calc(100vh - 330px)", md: "37.375rem" },
+    minHeight: { base: '100%', md: "37.375rem" },
     display: "flex",
     flexDirection: "column",
     alignItems: "start",
