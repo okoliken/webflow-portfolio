@@ -4,10 +4,10 @@ export const heroStyles = {
   container: css({
     bg: "purpleDark",
     color: "lavenderLight",
-    p: { base: "1.5rem", md: "2.5rem" },
+    p: { base: "1.5rem", lg: "2.5rem" },
     borderBottomLeftRadius: "md",
     borderBottomRightRadius: "md",
-    minHeight: { base: '100%', md: "37.375rem" },
+    minHeight: { base: '100%', lg: "37.375rem" },
     display: "flex",
     flexDirection: "column",
     alignItems: "start",
@@ -16,16 +16,16 @@ export const heroStyles = {
   }),
 
   contentWrapper: css({
-    mt: { base: "2rem", md: "2.5rem" },
+    mt: { base: "2rem", lg: "2.5rem" },
     display: "flex",
-    gap: { base: "2rem", md: "1.5rem" },
+    gap: { base: "2rem", lg: "1.5rem" },
     flexDirection: "column",
     maxWidth: { base: "100%", md: "80%", lg: "60%" },
   }),
 
   heading: css({
-    fontSize: { base: "base.heading", md: "base.display" },
-    lineHeight: { base: "40px", md: "display" },
+    fontSize: { base: "base.heading", lg: "base.display" },
+    lineHeight: { base: "40px", lg: "display" },
     letterSpacing: "tight",
     fontWeight: "medium",
     transition: "font-size 0.3s ease",
@@ -40,13 +40,13 @@ export const heroStyles = {
     pr: "1rem",
     fontFamily: "Georgia, serif",
     display: "inline-block",
-    transform: { base: "none", md: "translateY(2px)" },
+    transform: { base: "none", lg: "translateY(2px)" },
   }),
 
   subtitle: css({
-    fontSize: { base: "base.small", md: "base.subtitle" },
-    lineHeight: { base: "22px", md: "base" },
-    mt: { base: "1rem", md: "1.5rem" },
+    fontSize: { base: "base.small", lg: "base.subtitle" },
+    lineHeight: { base: "22px", lg: "base" },
+    mt: { base: "1rem", lg: "1.5rem" },
     maxWidth: { base: "100%", md: "90%", lg: "80%" },
     "& > br": { 
       display: {base: "none", md: "block"},
@@ -54,12 +54,12 @@ export const heroStyles = {
   }),
 
   footer: css({
-    mt: { base: "2rem", md: "auto" },
+    mt: { base: "2rem", lg: "auto" },
     display: "flex",
     flexDirection: { base: "column", md: "row" },
     justifyContent: "space-between",
-    alignItems: { base: "start", md: "end" },
-    gap: { base: "1.5rem", md: "0" },
+    alignItems: { base: "start", lg: "end" },
+    gap: { base: "1.5rem", lg: "0" },
     width: "100%",
   }),
 
@@ -73,11 +73,11 @@ export const heroStyles = {
   scrollImage: css({
     userSelect: "none",
     display: "block",
-    width: { base: "5rem", md: "auto" },
-    transform: { md: "translateY(1rem)" },
+    width: { base: "5rem", lg: "auto" },
+    transform: { lg: "translateY(1rem)" },
     transition: "transform 0.3s ease",
     _hover: {
-      transform: { md: "translateY(1.5rem)" },
+      transform: { lg: "translateY(1.5rem)" },
     },
   }),
 };
@@ -85,17 +85,17 @@ export const heroStyles = {
 export const servicesStyles = {
   servicesGrid: css({
     display: "grid",
-    gridTemplateColumns: { base: "1fr", md: "1fr 1fr" },
-    gap: { base: "1rem", md: "2.5rem" },
+    gridTemplateColumns: { base: "1fr", lg: "1fr 1fr" },
+    gap: { base: "1rem", lg: "2.5rem" },
     p: "2.5rem 0rem" ,
   }),
   serviceCard: css({
     display: "flex",
     flexDirection: "column",
     gap: "1.5rem",
-    p: { base: "1.5rem", md: "2.25rem" },
+    p: { base: "1.5rem", lg: "2.25rem" },
     borderRadius: "md",
-    h: { base: "100%", md: "21.613rem" },
+    h: { base: "100%", lg: "21.613rem" },
 
     "&.dev": {
       bgGradient: "secondary",
@@ -117,9 +117,9 @@ export const servicesStyles = {
 
   flexContainer: css({
     display: "flex",
-    flexDirection: { base: "column", md: "row" },
-    gap: {base: '1.5rem', md: '0'},
-    justifyContent: { base: "center", md: "space-between" },
+    flexDirection: { base: "column", lg: "row" },
+    gap: {base: '1.5rem', lg: '0'},
+    justifyContent: { base: "center", lg: "space-between" },
     "& > img": {
       objectFit: "contain",
     },
@@ -160,7 +160,7 @@ export const servicesStyles = {
       py: "0.369rem",
       px: "0.738rem",
       borderRadius: "1.231rem",
-      fontSize: {base: "0.75rem", md: "base.small"},
+      fontSize: {base: "0.75rem", lg: "base.small"},
       lineHeight: "snug",
     },
   }),
@@ -199,7 +199,7 @@ export const servicesStyles = {
       py: "0.369rem",
       px: "0.738rem",
       borderRadius: "1.231rem",
-      fontSize: {base: "0.75rem", md: "base.small"},
+      fontSize: {base: "0.75rem", lg: "base.small"},
       lineHeight: "snug",
     },
   }),
@@ -209,9 +209,9 @@ export const servicesStyles = {
     backgroundSize: "cover",
     backgroundPosition: "center",
     color: "lavenderLight",
-    p: {base: "1.5rem", md: "2.5rem"},
-    borderRadius: "md",
-    h: { base: "100%", md: "37.5rem" },
+    p: {base: "1.5rem", lg: "2.5rem"},
+    borderRadius: "lg",
+    h: { base: "100%", lg: "37.5rem" },
     zIndex: 0,
   }),
   darkPatternSection: css({
@@ -220,9 +220,9 @@ export const servicesStyles = {
     backgroundSize: "cover",
     backgroundPosition: "center",
     color: "lavenderLight",
-    p: {base: "1.5rem", md: "2.5rem"},
+    p: {base: "1.5rem", lg: "2.5rem"},
     borderRadius: "md",
-    h: { base: "100%", md: "37.5rem" },
+    h: { base: "100%", lg: "37.5rem" },
     mt: "2.5rem",
   }),
   imageWrapper: css({
@@ -233,7 +233,7 @@ export const servicesStyles = {
       left: "-3.5rem",
       width: "144.83px",
       height: "144.83px",
-      display: {base: 'none', md: 'block'}
+      display: {base: 'none', lg: 'block'}
     },
   }),
 };
@@ -241,21 +241,21 @@ export const servicesStyles = {
 export const awardsStyles = {
   awardsWrapper: css({
     bg: "lavenderLight",
-    p: {base: "1.5rem", md: "3.75rem"},
+    p: {base: "1.5rem", lg: "3.75rem"},
     borderRadius: "md",
-    h: {base: "100%", md: "32rem"},
+    h: {base: "100%", lg: "32rem"},
     mt: "2.5rem",
     display: "flex",
     flexDirection: "column",
   }),
   awardsFlexContainer: css({
     display: "flex",
-    gap: {base: '1rem', md: '0'},
-    flexDirection: {base: 'column', md:'row'},
-    justifyContent: {base: 'center', md:"space-between"},
+    gap: {base: '1rem', lg: '0'},
+    flexDirection: {base: 'column', lg:'row'},
+    justifyContent: {base: 'center', lg:"space-between"},
   }),
   awardsHeading: css({
-    fontSize: {base: "base.title", md: "base.heading"},
+    fontSize: {base: "base.title", lg: "base.heading"},
     lineHeight: "title",
     letterSpacing: "tight",
     color: "purpleBase",
@@ -278,10 +278,10 @@ export const awardsStyles = {
     "& > div": {
       display: "flex",
       flexDirection: "column",
-      gap: {base: "0.2rem", md: "0.5rem"},
+      gap: {base: "0.2rem", lg: "0.5rem"},
       "& > h3": {
-        fontSize: {base: "0.9rem", md: "base.body"},
-        lineHeight: {base: "22px", md: "32.2px"},
+        fontSize: {base: "0.9rem", lg: "base.body"},
+        lineHeight: {base: "22px", lg: "32.2px"},
         color: "purpleDark",
         fontWeight: "medium",
       },
@@ -292,8 +292,8 @@ export const awardsStyles = {
         color: "purpleDark",
       },
       "& > svg": {
-        width: {base: '1rem', md: '22px'},
-        height: {base: '1rem', md: '22px'},
+        width: {base: '1rem', lg: '22px'},
+        height: {base: '1rem', lg: '22px'},
       }
     },
   }),
@@ -302,16 +302,16 @@ export const awardsStyles = {
 export const footerStyles = {
   wrapper: css({
     bg: "purpleDark",
-    p: {base: "1.5rem", md: "2.5rem"},
-    borderRadius: "md",
+    p: {base: "1.5rem", lg: "2.5rem"},
+    borderRadius: "lg",
     h: "100%",
     mt: "2.5rem",
   }),
   header: css({
     display: "flex",
-    flexDirection: { base: "column", md: "row" },
-    gap: {base: '1.5rem', md: '0'},
-    justifyContent: { base: "center", md: "space-between" },
+    flexDirection: { base: "column", lg: "row" },
+    gap: {base: '1.5rem', lg: '0'},
+    justifyContent: { base: "center", lg: "space-between" },
     alignItems: "center",
   }),
 
@@ -324,7 +324,7 @@ export const footerStyles = {
   socialList: css({
     display: "flex",
     alignItems: "center",
-    flexDirection: {base: 'column', md: 'row'},
+    flexDirection: {base: 'column', lg: 'row'},
     "& > li": {
       p: "0.75rem",
       display: "flex",
@@ -349,11 +349,11 @@ export const footerStyles = {
     justifyContent: "center",
     gap: "2.5rem",
     h: "100%",
-    p: {base: '0rem', md: "5.5rem"},
+    p: {base: '0rem', lg: "5.5rem"},
   }),
   heading: css({
-    fontSize: {base: 'base.title', md:"base.display"},
-    lineHeight: {base: '40px', md: "100px"},
+    fontSize: {base: 'base.title', lg:"base.display"},
+    lineHeight: {base: '40px', lg: "100px"},
     fontWeight: "medium",
     textAlign: "center",
     color: "lavenderLight",
@@ -367,7 +367,7 @@ export const footerStyles = {
   footer: css({
     display: "flex",
     justifyContent: "space-between",
-    flexDirection: {base: 'column', md: 'row'},
+    flexDirection: {base: 'column', lg: 'row'},
     alignItems: "center",
     mt: "3.75rem",
   }),

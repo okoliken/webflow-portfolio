@@ -19,7 +19,7 @@ const globalStyles = defineGlobalStyles({
     scrollSnapType: 'y mandatory',
     overflowY: 'scroll',
     scrollBehavior: 'smooth',
-    maxWidth:'1500px',
+    maxWidth:'1800px',
     margin:'0 auto',
     '@media (min-width: 1440px)': {
       marginLeft: 'auto',
