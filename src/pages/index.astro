@@ -34,7 +34,9 @@ import { css } from "../../styled-system/css";
         </div>
 
         <div class={heroStyles.footer} id="hero-footer">
-          <p class={heroStyles.availabilityText}>Available for freelance work</p>
+          <p class={heroStyles.availabilityText}>
+            Available for freelance work
+          </p>
           <Image
             class={`${heroStyles.scrollImage} scroll-image-glow`}
             draggable={false}
@@ -58,7 +60,7 @@ import { css } from "../../styled-system/css";
                 mt: "1.5rem",
                 display: "flex",
                 gap: "0.5rem",
-                h: {base: "1.8rem", md: "2.113rem"},
+                h: { base: "1.8rem", md: "2.113rem" },
                 color: "purpleDark",
                 fontSize: "base.small",
                 lineHeight: "snug",
@@ -66,21 +68,21 @@ import { css } from "../../styled-system/css";
               },
               "& > .chips > div": {
                 border: "1px solid #FFFFFF",
-                py: {base: "0.1rem", md: "0.369rem"},
-                px: {base: "0.5rem", md: "0.738rem"},
+                py: { base: "0.1rem", md: "0.369rem" },
+                px: { base: "0.5rem", md: "0.738rem" },
                 color: "#FFFFFF",
                 borderRadius: "1.231rem",
-                fontSize: {base: "0.75rem", md: "base.small"},
+                fontSize: { base: "0.75rem", md: "base.small" },
                 lineHeight: "snug",
               },
             })}
           >
             <p class={servicesStyles.serviceDescription}>
-              I specialize in developing websites using Webflow, a powerful platform
-              that allows for easy customization and responsive design. I have
-              experience building websites for a variety of industries, from small
-              businesses to large corporations. My focus is always on creating
-              functional and smooth websites that generate traffic.
+              I specialize in developing websites using Webflow, a powerful
+              platform that allows for easy customization and responsive design.
+              I have experience building websites for a variety of industries,
+              from small businesses to large corporations. My focus is always on
+              creating functional and smooth websites that generate traffic.
             </p>
 
             <div class="chips">
@@ -112,17 +114,18 @@ import { css } from "../../styled-system/css";
                 px: "0.738rem",
                 color: "#FFFFFF",
                 borderRadius: "1.231rem",
-                fontSize: {base: "0.75rem", md: "base.small"},
+                fontSize: { base: "0.75rem", md: "base.small" },
                 lineHeight: "snug",
               },
             })}
           >
             <p class={servicesStyles.serviceDescription}>
-              Art direction is the process of bringing together all of the creative
-              elements of a project to create a cohesive and visually stunning end
-              product. I work with clients to develop a concept and bring it to life
-              through art direction. I believe that attention to detail and a clear
-              vision are key to creating truly memorable designs.
+              Art direction is the process of bringing together all of the
+              creative elements of a project to create a cohesive and visually
+              stunning end product. I work with clients to develop a concept and
+              bring it to life through art direction. I believe that attention
+              to detail and a clear vision are key to creating truly memorable
+              designs.
             </p>
 
             <div class="chips">
@@ -166,7 +169,7 @@ import { css } from "../../styled-system/css";
                   fontWeight: "light",
                   color: "purpleDark",
                   "& > br": {
-                    display: {base: "none", md: "block"},
+                    display: { base: "none", md: "block" },
                   },
                 })}
               >
@@ -193,7 +196,22 @@ import { css } from "../../styled-system/css";
               </Button>
             </div>
           </div>
-          <Image src={KorbaImage} alt="Korba" width="660" height="520" class="services-item" />
+          <div class="services-item">
+            <Image
+          class={css({
+            w: {
+               base: "100% !important",
+               md: "fit",
+            },
+            objectFit: "cover",
+          })}
+            src={KorbaImage}
+            alt="Korba"
+            width="660"
+            height="520"
+            
+          />
+          </div>
         </div>
       </div>
 
@@ -229,9 +247,9 @@ import { css } from "../../styled-system/css";
                   lineHeight: "snug",
                   fontWeight: "light",
                   color: "lavenderLight",
-                  "& > br": { 
-                    display: {base: "none", md: "block"},
-                  }
+                  "& > br": {
+                    display: { base: "none", md: "block" },
+                  },
                 })}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
@@ -258,9 +276,26 @@ import { css } from "../../styled-system/css";
               </Button>
             </div>
           </div>
-          <div class={servicesStyles.imageWrapper + " project-item"}>
-            <Image src={TrailHiveImage} alt="Korba" width="660" height="520" />
-            <Image src={SiteOfTheDay} alt="Site of the day" width="660" height="520" />
+          <div class={servicesStyles.imageWrapper + "project-item"}>
+            <Image
+              class={css({
+                w: {
+                  base: "100%!",
+                  md: "fit",
+                },
+                objectFit: "cover",
+              })}
+              src={TrailHiveImage}
+              alt="Korba"
+              width="660"
+              height="520"
+            />
+            <Image
+              src={SiteOfTheDay}
+              alt="Site of the day"
+              width="660"
+              height="520"
+            />
           </div>
         </div>
       </div>
@@ -356,7 +391,11 @@ import { css } from "../../styled-system/css";
 
       <footer class={footerStyles.wrapper}>
         <div class={footerStyles.header}>
-          <Image class={footerStyles.logo} src={Logo} alt="Stephanie Holmes logo" />
+          <Image
+            class={footerStyles.logo}
+            src={Logo}
+            alt="Stephanie Holmes logo"
+          />
           <ul class={footerStyles.socialList}>
             <li>
               Linkedin
@@ -419,12 +458,11 @@ import { css } from "../../styled-system/css";
             src={LetsTalkNowImage}
             alt="Let's talk now"
             draggable="false"
-
           />
         </div>
 
         <div class={footerStyles.footer}>
-          <p class={footerStyles.footerText}> 2024 – All Rights Reserved</p>
+          <p class={footerStyles.footerText}>2024 – All Rights Reserved</p>
           <p class={footerStyles.footerText}>Available for freelance work</p>
         </div>
       </footer>
@@ -449,49 +487,52 @@ import { css } from "../../styled-system/css";
 
   gsap.registerPlugin(ScrollTrigger);
 
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     // Initial hero animation
-    gsap.set("#hero-content > *", { 
+    gsap.set("#hero-content > *", {
       opacity: 0,
-      y: 50
+      y: 50,
     });
-    
+
     gsap.set("#hero-footer", {
       opacity: 0,
-      y: 30
+      y: 30,
     });
 
     // Create the animation timeline for hero section
-    const tl = gsap.timeline({ defaults: { ease: "power3.out" }});
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
     tl.to("#hero-content > *", {
       opacity: 1,
       y: 0,
       duration: 1,
-      stagger: 0.2
-    })
-    .to("#hero-footer", {
-      opacity: 1,
-      y: 0,
-      duration: 0.8
-    }, "-=0.5");
+      stagger: 0.2,
+    }).to(
+      "#hero-footer",
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+      },
+      "-=0.5",
+    );
 
     // Scroll image bounce and glow animation
-    const scrollImage = document.querySelectorAll('.scroll-image-glow');
-    
+    const scrollImage = document.querySelectorAll(".scroll-image-glow");
+
     // Continuous bounce animation
     gsap.to(scrollImage, {
       y: -10,
       duration: 1.5,
       ease: "power1.inOut",
       yoyo: true,
-      repeat: -1
+      repeat: -1,
     });
 
     // Glow effect
     function toggleGlow() {
       scrollImage.forEach((image) => {
-        image.classList.toggle('active');
+        image.classList.toggle("active");
       });
     }
 
@@ -503,12 +544,12 @@ import { css } from "../../styled-system/css";
       scrollTrigger: {
         trigger: ".services-item",
         start: "top 80%",
-        once: true // Only run once
+        once: true, // Only run once
       },
       y: 50,
       opacity: 0,
       duration: 0.8,
-      stagger: 0.2
+      stagger: 0.2,
     });
 
     // Projects animation
@@ -516,12 +557,12 @@ import { css } from "../../styled-system/css";
       scrollTrigger: {
         trigger: ".project-item",
         start: "top 75%",
-        once: true // Only run once
+        once: true, // Only run once
       },
       y: 30,
       opacity: 0,
       duration: 1,
-      stagger: 0.3
+      stagger: 0.3,
     });
 
     // Awards section animation
@@ -529,12 +570,12 @@ import { css } from "../../styled-system/css";
       scrollTrigger: {
         trigger: ".awards-item",
         start: "top 80%",
-        once: true // Only run once
+        once: true, // Only run once
       },
       x: -30,
       opacity: 0,
       duration: 0.6,
-      stagger: 0.15
+      stagger: 0.15,
     });
 
     // Footer animation
@@ -542,12 +583,12 @@ import { css } from "../../styled-system/css";
       scrollTrigger: {
         trigger: "footer",
         start: "top 85%",
-        once: true // Only run once
+        once: true, // Only run once
       },
       y: 20,
       opacity: 0,
       duration: 0.8,
-      stagger: 0.2
+      stagger: 0.2,
     });
   });
 </script>
