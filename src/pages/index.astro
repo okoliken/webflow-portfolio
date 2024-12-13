@@ -276,7 +276,7 @@ import { css } from "../../styled-system/css";
               </Button>
             </div>
           </div>
-          <div class={servicesStyles.imageWrapper + "project-item"}>
+          <div class={servicesStyles.imageWrapper + " project-item"}>
             <Image
               class={css({
                 w: {
@@ -506,7 +506,7 @@ import { css } from "../../styled-system/css";
       opacity: 1,
       y: 0,
       duration: 1,
-      stagger: 0.2,
+      stagger: 0.3,
     }).to(
       "#hero-footer",
       {
@@ -514,7 +514,7 @@ import { css } from "../../styled-system/css";
         y: 0,
         duration: 0.8,
       },
-      "-=0.5",
+      "-=0.6",
     );
 
     // Scroll image bounce and glow animation
@@ -577,6 +577,18 @@ import { css } from "../../styled-system/css";
       duration: 0.6,
       stagger: 0.15,
     });
+
+    gsap.from(".project-item > img:last-child", {
+      scrollTrigger: {
+        trigger: ".project-item",
+        start: "top 60%",
+        once: true, // Only run once
+      },
+      x: -30,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.15,
+    })  
 
     // Footer animation
     gsap.from("footer > *", {
